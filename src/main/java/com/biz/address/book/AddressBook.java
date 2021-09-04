@@ -72,6 +72,8 @@ public class AddressBook extends Contacts {
                         System.out.println("Re-Correct your Email");
                         contacts.setEmail(s.next());
                         break;
+                    default:
+                        System.out.println("Invalid input");
                 }
 
             }
@@ -90,13 +92,30 @@ public class AddressBook extends Contacts {
             }
         }
     }
+    public void operation() {
+        boolean status = true;
+        do {
+            System.out.println("Choose Operation you want to do");
+            System.out
+                    .println("1. Add\t2. Edit\t3. Delete");
+            switch (s.nextInt()) {
+                case 1:
+                    add();
+                    break;
+                case 2:
+                    edit();
+                    break;
+                case 3:
+                    delete();
+                    break;
+                default:
+                    System.out.println("Invalid input");
+            }
+        }while (status);
+    }
     public static void main(String[] args) {
         System.out.println("Welcome to Address Book");
         AddressBook addressBook=new AddressBook();
-        addressBook.add();
-        System.out.println("enter first name to edit");
-        addressBook.edit();
-        System.out.println("enter first name to delete contact");
-        addressBook.delete();
+        addressBook.operation();
     }
 }
