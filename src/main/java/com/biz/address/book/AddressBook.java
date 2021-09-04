@@ -1,7 +1,13 @@
 package com.biz.address.book;
 
-public class AddressBook {
-    public static void main(String[] args) {
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class AddressBook extends Contacts {
+    Scanner s=new Scanner(System.in);
+    ArrayList<Contacts> contacts=new ArrayList<Contacts>();
+
+        public static void main(String[] args) {
         System.out.println("Welcome to Address Book");
     }
 }
