@@ -76,7 +76,19 @@ public class AddressBook extends Contacts {
 
             }
         }
+    }
+    public void delete() {
+        System.out.println("Enter your First name:");
+        String firstName = s.next();
 
+        Iterator<Contacts> iterator = contacts.listIterator();
+        while (iterator.hasNext()) {
+            Contacts contacts = iterator.next();
+
+            if (firstName.equals(contacts.getFirstName())) {
+                contacts.remove(contacts);
+            }
+        }
     }
     public static void main(String[] args) {
         System.out.println("Welcome to Address Book");
@@ -84,5 +96,7 @@ public class AddressBook extends Contacts {
         addressBook.add();
         System.out.println("enter first name to edit");
         addressBook.edit();
+        System.out.println("enter first name to delete contact");
+        addressBook.delete();
     }
 }

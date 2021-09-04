@@ -24,6 +24,7 @@ public class Contacts {
                 '}';
     }
 
+
     public String getFirstName() {
         return firstName;
     }
@@ -88,5 +89,7 @@ public class Contacts {
         this.email = email;
     }
 
+    protected void remove(Contacts contacts) {
 
+    }
 }
