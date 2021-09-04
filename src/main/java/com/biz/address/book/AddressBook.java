@@ -116,6 +116,11 @@ public class AddressBook extends Contacts {
     public static void main(String[] args) {
         System.out.println("Welcome to Address Book");
         AddressBook addressBook=new AddressBook();
-        addressBook.operation();
+        Contacts contacts=new Contacts();
+        if (!contacts.equals(contacts.getFirstName())){
+            addressBook.operation();
+        }else {
+            System.out.println("Duplicate contact");
+        }
     }
 }
